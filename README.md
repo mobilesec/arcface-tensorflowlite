@@ -1,7 +1,7 @@
 # ArcFace face recognition
 Implementation of the [ArcFace face recognition algorithm](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.htm). It includes a pre-trained model based on [ResNet50](https://arxiv.org/abs/1512.03385).
 
-The code is based on[peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow light model using `tf.lite.TFLiteConverter` which increased the speed of the inference by ~25%.
+The code is based on [peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow light model using `tf.lite.TFLiteConverter` which increased the speed of the inference by ~25%.
 
 ## Installation
 You can install the package through pip:
