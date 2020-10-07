@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='arcface',
-    version='0.0.1',
+    version='0.0.2',
     author="Philipp Hofer",
     author_email="philipp.hofer@ins.jku.at",
     description="ArcFace face recognition implementation in Tensorflow Light.",
