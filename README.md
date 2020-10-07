@@ -1,7 +1,7 @@
 # ArcFace face recognition
 Implementation of the [ArcFace face recognition algorithm](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.htm). It includes a pre-trained model based on [ResNet50](https://arxiv.org/abs/1512.03385).
 
-The code is based on [peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow light model using `tf.lite.TFLiteConverter` which increased the speed of the inference by ~25%.
+The code is based on [peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow light model using `tf.lite.TFLiteConverter` which increased the speed of the inference by a factor of ~2.27.
 
 ## Installation
 You can install the package through pip:
@@ -9,7 +9,7 @@ You can install the package through pip:
 pip install arcface
 ```
 
-## Quick-Start
+## Quick start
 
 The following example illustrates the ease of use of this package:
 ```python
@@ -38,5 +38,16 @@ The face recognition tool returns (an array of) 512-d embedding(s) as a numpy ar
 
 > Notice! This package does neither perform face detection nor face alignment! It assumes that the images are already pre-processsed!
 
+## Benchmark
+
+| Model | Backbone | Framework | LFW Accuracy | Speed [ms/embedding] * |
+|----------|------|------|-----|-----|
+| [ArcFace paper](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.htm) | R100     | MXNet        | 99.82        | -       |
+| [ArcFace TF2](https://github.com/peteryuX/arcface-tf2)   | R50      | Tensorflow 2 | 99.35 | 102 |
+| **This repository** | **R50** | **Tensorflow Light** | **96.87** | **45** |
+
+\* executed on a CPU: Intel i7-10510U
+
 ## License
+
 Licensed under the [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt).
