@@ -1,7 +1,7 @@
 # ArcFace face recognition
 Implementation of the [ArcFace face recognition algorithm](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.htm). It includes a pre-trained model based on [ResNet50](https://arxiv.org/abs/1512.03385).
 
-The code is based on [peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow light model using `tf.lite.TFLiteConverter` which increased the speed of the inference by a factor of ~2.27.
+The code is based on [peteryuX's](https://github.com/peteryuX/arcface-tf2) implementation. Instead of using full Tensorflow for the inference, the model has been converted to a Tensorflow lite model using `tf.lite.TFLiteConverter` which increased the speed of the inference by a factor of ~2.27.
 
 ## Installation
 You can install the package through pip:
@@ -44,7 +44,7 @@ The face recognition tool returns (an array of) 512-d embedding(s) as a numpy ar
 |----------|------|------|-----|-----|
 | [ArcFace paper](https://openaccess.thecvf.com/content_CVPR_2019/html/Deng_ArcFace_Additive_Angular_Margin_Loss_for_Deep_Face_Recognition_CVPR_2019_paper.htm) | R100     | MXNet        | 99.82        | -       |
 | [ArcFace TF2](https://github.com/peteryuX/arcface-tf2)   | R50      | Tensorflow 2 | 99.35 | 102 |
-| **This repository** | **R50** | **Tensorflow Light** | **96.87** | **45** |
+| **This repository** | **R50** | **Tensorflow Lite** | **96.87** | **45** |
 
 \* executed on a CPU: Intel i7-10510U
 
