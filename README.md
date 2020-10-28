@@ -50,4 +50,6 @@ The face recognition tool returns (an array of) 512-d embedding(s) as a numpy ar
 
 ## License
 
-Licensed under the [EUPL](https://joinup.ec.europa.eu/sites/default/files/custom-page/attachment/2020-03/EUPL-1.2%20EN.txt).
+Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence"). You may not use this work except in compliance with the Licence.
+
+**License**: [European Union Public License v1.2](https://joinup.ec.europa.eu/software/page/eupl)
