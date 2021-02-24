@@ -23,17 +23,12 @@ import numpy as np
 import cv2
 import os
 import requests
-
+from astropy.utils.data import download_file
 
 class ArcFace():
     def __init__(self): 
-        data_path = os.path.join(os.path.dirname(arcface.__file__), "data")
-        tflite_path = os.path.join(data_path, "model.tflite")
-        if not os.path.isdir(data_path):
-            os.mkdir(data_path)
-        if not os.path.exists(tflite_path):
-            self._download_model_file(tflite_path)
-    
+        tflite_path = download_file("https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download", cache=True) 
+        
         self.interpreter = tf.lite.Interpreter(model_path=tflite_path)
         self.interpreter.allocate_tensors()
         self.input_details = self.interpreter.get_input_details()
@@ -67,12 +62,6 @@ class ArcFace():
         dist = np.sum(np.square(diff))
         return dist
         
-    def _download_model_file(self, path):
-        print("Downloading pre-trained Tensorflow Light model (161 MB)...")
-        eflite_path = os.path.join(os.path.dirname(arcface.__file__), "data/model.tflite")
-        tflight_model = requests.get("https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download")
-        open(path, 'wb').write(tflight_model.content)
-
     def _calc_emb_list(self, imgs):
         embs = []
         for img in imgs:
