@@ -35,7 +35,8 @@ setuptools.setup(
           "pyyaml>=5.3",
           "opencv-python>=4.4",
           "numpy<1.19.0",
-          "requests>=2.24.0"
+          "requests>=2.24.0",
+          "astropy>=4.2"
       ],
     tests_require=['pytest'],  
     license="European Union Public Licence 1.2 (EUPL 1.2)",
