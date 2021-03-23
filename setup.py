@@ -34,7 +34,7 @@ setuptools.setup(
           "tensorflow>=2.0.0",
           "pyyaml>=5.3",
           "opencv-python>=4.4",
-          "numpy<1.19.0",
+          "numpy",
           "requests>=2.24.0",
           "astropy"
       ],
