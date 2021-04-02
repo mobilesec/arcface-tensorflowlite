@@ -23,12 +23,15 @@ import numpy as np
 import cv2
 import os
 import requests
-from astropy.utils.data import download_file
 
 class ArcFace():
-    def __init__(self): 
-        tflite_path = download_file("https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download", cache=True) 
-        
+    def __init__(self, model_path = None):
+        if model_path == None:
+            from astropy.utils.data import download_file
+            tflite_path = download_file("https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download", cache=True)
+        else:
+            tflite_path = model_path
+
         self.interpreter = tf.lite.Interpreter(model_path=tflite_path)
         self.interpreter.allocate_tensors()
         self.input_details = self.interpreter.get_input_details()
