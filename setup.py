@@ -22,13 +22,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='arcface',
-    version='0.0.5',
+    version='0.0.6',
     author="Philipp Hofer",
     author_email="philipp.hofer@ins.jku.at",
-    description="ArcFace face recognition implementation in Tensorflow Light.",
+    description="ArcFace face recognition implementation in Tensorflow Lite.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mobilesec/arcface-tensorflowlight",
+    url="https://github.com/mobilesec/arcface-tensorflowlite",
     packages=setuptools.find_packages(exclude=["tests.*", "tests"]),
     install_requires=[
           "tensorflow>=2.3.0",

@@ -27,7 +27,10 @@ import requests
 class ArcFace():
     def __init__(self, model_path = None):
         if model_path == None:
-            from astropy.utils.data import download_file
+            try:
+                from astropy.utils.data import download_file
+            except ImportError:
+                raise ImportError("Please install astropy (pip install astropy) if you want to use the pre-trained ArcFace network.")
             tflite_path = download_file("https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download", cache=True)
         else:
             tflite_path = model_path
