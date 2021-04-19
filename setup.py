@@ -31,14 +31,21 @@ setuptools.setup(
     url="https://github.com/mobilesec/arcface-tensorflowlight",
     packages=setuptools.find_packages(exclude=["tests.*", "tests"]),
     install_requires=[
-          "tensorflow>=2.0.0",
+          "tensorflow>=2.3.0",
           "pyyaml>=5.3",
           "opencv-python>=4.4",
           "numpy",
           "requests>=2.24.0",
-          "astropy"
       ],
-    tests_require=['pytest'],  
+    extras_require = {
+          'testing': [
+                "pytest-runner",
+                "pytest"
+             ],
+          'default_model': [
+              "astropy"
+            ]
+      },
     license="European Union Public Licence 1.2 (EUPL 1.2)",
     classifiers=[
         "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
