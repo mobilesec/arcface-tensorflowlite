@@ -22,7 +22,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='arcface',
-    version='0.0.6',
+    version='0.0.7',
     author="Philipp Hofer",
     author_email="philipp.hofer@ins.jku.at",
     description="ArcFace face recognition implementation in Tensorflow Lite.",
@@ -36,6 +36,7 @@ setuptools.setup(
           "opencv-python>=4.4",
           "numpy",
           "requests>=2.24.0",
+          "errno",
       ],
     extras_require = {
           'testing': [

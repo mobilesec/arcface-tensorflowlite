@@ -23,6 +23,7 @@ import numpy as np
 import cv2
 import os
 import requests
+import errno
 
 class ArcFace():
     def __init__(self, model_path = None):
