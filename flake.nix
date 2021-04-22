@@ -20,7 +20,11 @@
   flake-utils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" ] (system:
   let
     pkgs = import nixpkgs { inherit system; };
-    mach-nix-utils = import mach-nix { inherit pkgs; };
+    mach-nix-utils = import mach-nix {
+      inherit pkgs;
+      pypiDataRev = pypi-deps-db.rev;
+      pypiDataSha256 = pypi-deps-db.narHash;
+    };
     model-url = "https://cloud.ins.jku.at/index.php/s/g2YDT8Zn9RkzsEy/download";
     model-file = builtins.fetchurl {
       url = model-url;
