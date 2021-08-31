@@ -53,3 +53,6 @@ The face recognition tool returns (an array of) 512-d embedding(s) as a numpy ar
 Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission - subsequent versions of the EUPL (the "Licence"). You may not use this work except in compliance with the Licence.
 
 **License**: [European Union Public License v1.2](https://joinup.ec.europa.eu/software/page/eupl)
+
+## Acknowledgement
+This work has been carried out within the scope of Digidow, the Christian Doppler Laboratory for Private Digital Authentication in the Physical World, funded by the Christian Doppler Forschungsgesellschaft, 3 Banken IT GmbH, Kepler Universitätsklinikum GmbH, NXP Semiconductors Austria GmbH, and Österreichische Staatsdruckerei GmbH and has partially been supported by the LIT Secure and Correct Systems Lab funded by the State of Upper Austria.
